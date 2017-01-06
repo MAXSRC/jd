@@ -1,0 +1,134 @@
+.header{width:100%;height:34px;background-color:#FAFAFA;border-bottom:1px solid #DADADA}
+.header-con{height:34px;width:1200px;margin: 0 auto;overflow:visible;position: relative;}
+.top,.banner,.main,.todayBt,.mid-tip,.houseBanner,.houseCon,.footer-top,.footer-mid,.topImg{width:1200px;display: block;margin: 0 auto;clear: both;overflow: hidden}
+.logo{margin: 16px 115px 25px 0}
+.serIp{width:524px;height:28px;border:2px solid #FF3C3C;margin-top:20px;}
+.ser1,.ser1 div{width:68px;height:28px;background-color:#F8F8F8;border-left:1px solid #E0E0E0;border-right:1px solid #E0E0E0;position:relative;}
+.ser1{border: none;width: 70px;}
+.ser1 div{position:absolute;z-index:3;top:0;left: 0;padding-top:4px;height:24px;cursor: pointer;padding-left: 20px;width: 48px;}
+.ser1 .ser12{z-index:-1;padding-top: 28px;display: none; }
+.ser11{padding-top:8px;}
+.ser1 div:hover{color:red;}
+.serIp input{width:350px;border:none;height:28px;padding: 0 3px;}
+.serIp input:focus{outline:0}
+.ser2{background-color:#FF3C3C;color:white;width:98px;text-align:center;letter-spacing:5px}
+.ser2{text-align:center;font-size:14px;height:25px;padding-top:3px;}
+.dailyUse li,.banner-cen li{float:left;margin-right:8px;margin-top:5px}
+.dailyUse a,.top-r div{font-size:13px;color:#999}
+.top-r{overflow:hidden;top:19px;width:124px;height:49px;position: absolute;right: 82px;}
+.top{position: relative;overflow: visible}
+.top-r div{width:60px;height:43px;background-color:#FBFBFB;border:1px solid #F1F1F1;float:left;text-align: center;}
+.gwc{width:82px;height:37px;background-color:#FF3C3C;color:white;position:absolute;border:none;top: 15px;padding-top:12px;text-align: center;overflow: visible;right: 0;}
+.gwc1{position:absolute;top:0;left:-4px}
+#gWc{width: 360px;height: 260px;position: absolute;border: 1px solid #cccccc;border-top: 2px solid #FF3C3C;top:49px;
+text-align: center;right: 0;background-color: white;z-index: 300;display: none;}
+#gWc div{width: 160px;height:24px;background-color:#FF3C3C;text-align: center;color: white;
+font-size: 12px;margin: auto;position: absolute;top:-8px;bottom: 0;left: 0;right: 0;padding-top:6px}
+.banner{height:34px;position: relative;overflow: visible}
+.pho{position: absolute;bottom:0;right:0}
+.banner-left{width:210px;height:28px;color:white;background-color: #FF3C3C;margin-right:16px;text-align:center;padding-top:6px;font-weight:600;font-size: 15px}
+.banner-cen li{margin-right: 40px}
+.banner-cen a{font-size: 14px;font-weight:600;color: black}
+.dailyUse a:hover,.banner-cen a:hover,.banner-cen .red{color:#FF3C3C;}
+.line{width: 100%;height:2px;background-color: #FD3F49;clear: both}
+.bannerAll{width: 210px;height:395px;border-top: 3px solid #9F1111;background-color: #C13130}
+.bannerAll li{height:33px;text-align:center;position:relative}
+.bannerAll li img{position:absolute;right:15px;top:8px;}
+.bannerAll a{color:white}
+.bannerAll li:hover{background-color:#872222}
+#mainA{width:990px;height:398px;background: white;display: none;position: absolute;top:0;left:210px;z-index: 200}
+#mainA .mainA-l{border-right: 1px solid #CCCCCC}
+#mainM{height:400px;width:100%;}
+.message{width:240px;height:398px;overflow:hidden;background-color: white}
+.kXun{width:215px;margin:0 auto 25px;height:190px;}
+.kkx{height:27px;border-bottom:1px dotted #CCCCCC;margin-bottom:8px;padding-top:8px}
+.news{line-height:26px}
+.news a,.topLi a{color:black}
+.news span{font-weight:600}
+.red span{color:#E60012}
+.news .red{color:#E60012}
+.daTu,#mainA .mainA-l{width:750px;height:398px;overflow: hidden}
+.daTu{position:relative}
+#picS{width:750px;height: 398px;}
+#picS img{position: absolute;z-index: 3}
+#but{position: absolute;width:315px;height:15px;left:217px;bottom:25px;z-index:6}
+#but li{width:15px;height:15px;float: left;margin-right:20px;background-color: #CCCCCC }
+.zuoYou{width: 45px;height:80px;color:white;font-size:50px;position:absolute;background-color:#CCCCCC;
+opacity:0.4;text-align: center;display: none;cursor: pointer;z-index: 100}
+#last{left: 0;top:137px;}
+#next{right: 0;top:137px;}
+.sales a{width:79px;height:25px;border-top:1px solid #ECECEC;border-right:1px solid #ECECEC;text-align: center;padding-top: 55px}
+.sale{margin: 0 0 5px 14px}
+.a1{background: url(../images/shiyong.png) 24px 18px no-repeat;}
+.a2{background: url(../images/jifenshangceng.png) 24px 18px no-repeat;}
+.a3{background: url(../images/lipinka.png) 24px 18px no-repeat;}
+.a4{background: url(../images/congzhizx.png) 24px 18px no-repeat;}
+.a5{background: url(../images/yeyoudianka.png) 24px 18px no-repeat;}
+.a6{background: url(../images/1haoqianbao.png) 24px 18px no-repeat;}
+.content{width: 100%;background-color: #F9F9F9;padding-top: 20px}
+.houseBanner{height:52px;position: relative;border-bottom: 2px solid #FF4500}
+.houseBanner span{font-size: 17px;color:#FF4500;position:absolute;left: 0;bottom:7px;font-weight: 600}
+.houseBanner .outer{background: url(../images/sanC.png) 0 -26px repeat-x;position: absolute;left: 93px;bottom: 3px;height: 26px}
+.houseBanner .inner{background: url(../images/sanC.png) 0 0 no-repeat;height: 26px}
+.houseBanner .con{background: url(../images/sanC.png) right -52px no-repeat;height: 26px;padding-left: 15px;padding-top: 4px;padding-right: 5px}
+.houseLi{position: absolute;bottom:8px;right:6px }
+.houseLi li{float: left;color:#616161}
+.houseLi a{margin: 0 8px}
+.houseCon-left{width: 210px;height:360px;background-color: white}
+.houseCon-leftLi li{width:180px;height:25px;margin: 0 auto;border-bottom: 1px dotted #CCCCCC;padding-top:7px;position: relative}
+.houseCon-leftLi a{margin-left:20px;color: black}
+.houseCon-leftLi .ding{position: absolute;left:85px }
+.houseCon-leftBtm{height:248px;padding-top:13px;text-align:center}
+.houseCon-leftBtm h3 a,.houseCon2 h3 a,.houseCon3 h3 a,.picBtm-l h3{font-size:14px;font-weight:600;color:#FF4500}
+.houseCon-leftBtm .fs12,.houseCon2 .fs12,.houseCon3 .fs12{margin:10px;color:#999999;display:block}
+.housePic{width:1000px;height:360px;overflow: hidden}
+.houseCon2,.houseCon3{padding-top:13px;text-align: center;width: 220px;background-color: white;height:347px}
+.houseCon2 h3,.houseCon3 h3,.picBtm-l{color:black}
+.houseCon22{padding-top: 13px;}
+.bigHouse,.main,.mainOut{position: relative}
+.picBtm{position: absolute;left: 210px;top:373px;width: 330px;height:180px;background-color: white}
+.picBtm .picBtm-l{margin: 20px;text-align:left;line-height: 25px;}
+.bigHouse .houseCon2,.bigHouse .houseCon3,.bigHouse .houseCon-left{height:540px;}
+.bigHouse .smHouse{height:180px;width:210px;}
+.footer{height:491px;width:100%;text-align: center}
+.footer-top{width:1180px;height:96px;padding-left:44px;border-bottom:1px solid #EBEBEB;padding-top: 30px}
+.footTopLi{width:295px;}
+.footTopLi img{float:left;margin-right:14px}
+.footTopLi div{margin-top:8px;margin-bottom:8px;}
+.footTopLi p{font-size: 14px;color: #999999}
+.footer-mid{padding-left:44px;height:177px;padding-top:28px}
+.fotMidLi{float:left;width:168px;line-height:25px}
+.footer-mid span{width: 90px;margin-right: 80px;float: left;text-align: center;line-height: 25px;}
+.biAoTi,.footer-mid span{font-size: 14px;font-weight: 600;}
+.footer-btm{height:92px;text-align: center;line-height:25px;}
+.footer-btm p,.footer-mid span,.fotMidLi{color:#666666}
+.fotBtmLi{width:950px;overflow: hidden;margin: 0 auto}
+.fotBtmLi2{width: 750px;line-height: 25px;}
+#floor{width:44px;height:400px;background:url(../images/bannBg.png);position:fixed;right:25px;bottom:30px;display: none }
+#floor li,#floor div{width:44px;height:40px;cursor: pointer}
+#floor div,#bac{height:37px;padding-top:3px;visibility: hidden;background-color:red;color:white;font-size:12px;text-align:center;}
+#floor #backTop{width:44px;height:40px;cursor: pointer;display: block}
+#floor2{width: 100%;height:50px;position: fixed;top:0;background-color:#F5F5F5;display:none;border-bottom:2px solid #CECECE;z-index: 300; }
+.floor2-cen{width: 1200px;height:50px;position: relative;margin: 0 auto;}
+.floor2-cen .serIpFix input{width: 454px;}
+.floor2-cen .serIpFix{position: absolute;left: 350px;width: 558px;top:-10px;}
+#bannerFix {position: absolute;left: 40px;width:150px;top:0;height:35px;padding-top:15px}
+#bannerFix .bannerAll{position: absolute;top:50px;left: -40px;display: none;}
+#trueHou .green{color: #7EB123}
+#trueHou .houseBanner-g{border-bottom:2px solid #7EB123 }
+#endShow {width: 1200px;height:360px;overflow: hidden;margin-bottom: 20px;}
+.mainShow,.mainOut{width: 330px;height:360px;overflow: hidden;float: left}
+.tiAoO{position:absolute;bottom:23px;left:115px;width:115px;height:5px;z-index: 200;overflow: hidden}
+.tiAoO .tiAo{width: 30px;height:5px;float: left;margin-right:5px;background-color:#DDDDDD }
+.tiAoO .tiAoIn{height: 8px;background-color: #FF3C3C;display: block}
+.houseCon .end{width:2500px;}
+.fotBtmLi a{float:left;margin:0 10px;}
+.footer-pic{overflow: hidden;margin:20px auto 0;width:890px;}
+.footer-pic img{float: left;margin-right:8px}
+.fr{float:right}
+.fl,.sales li,.sales a,.footTopLi,.fotBtmLi li,#picS  img,.end a,.end img,.housePic img{float:left}
+.marBtm20{margin-bottom:20px}
+.disPl{display: inline-block}
+a{color:#666666\9}
+.fs12,.bannerAll a,.houseCon-leftLi li,.houseLi li,.fotMidLi,.fotBtmLi,.footer-btm p,.topLi li{font-size:12px}
+a:hover{color: red}
