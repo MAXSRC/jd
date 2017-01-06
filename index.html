@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东一号店</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index2.css"/>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header-con" id="header-con">
+        <div id="enter" class="enter fl">
+            <div class="enter1 fs12">&nbsp;&nbsp;Hi,请&nbsp;<a href="">登录</a>/<a href="">注册</a></div>
+            <div id="bord" class="bord">
+                <div class="touXiAng"></div>
+                <div class="jiFen">
+                    <span>积分</span>
+                    <span>勋章</span>
+                </div>
+            </div>
+            <img id="topPoint" src="images1/toBtm.png"/>
+        </div>
+        <script>
+            var enter=document.getElementById('enter');
+            var bord=document.getElementById('bord');
+            var topPoint=document.getElementById('topPoint');
+            enter.onmouseover=bo1;
+            function bo1(){
+                bord.style.zIndex=2;
+                bord.style.display='block';
+                topPoint.src='images1/toTop.png';
+            }
+            enter.onmouseout=bo2;
+            function bo2(){
+                bord.style.zIndex=-1;
+                bord.style.display='none';
+                topPoint.src='images1/toBtm.png';
+            }
+        </script>
+        <div class="deliver fs12">送货至&nbsp;
+            <div class="fl inp" id="inp">北京
+                <img id="deLiv" src="images1/deliver2.png"/>
+                <div class="address" id="add"></div>
+            </div>
+            <img class="fr" src="images/car.png"/>
+        </div>
+        <script>
+            var inp=document.getElementById('inp');
+            var add=document.getElementById('add');
+            var deLiv=document.getElementById('deLiv');
+            inp.onmouseover=deLi;
+            function deLi(){
+                deLiv.src='images1/deliver.png';
+                add.style.zIndex=5;
+                add.style.display='block'
+            }
+            inp.onmouseout=deLi2;
+            function deLi2(){
+                deLiv.src='images1/deliver2.png';
+                add.style.zIndex=-1;
+                add.style.display='none'
+            }
+        </script>
+        <ul class="topBanner" id="topBanner">
+            <li>
+                <a id="topLiBlk" class="topLiBlk" href="">我的1号店</a>
+                <div id="topLiHid">
+                    <a href="">我的订单</a><br/>
+                    <a href="">我的积分</a><br/>
+                    <a href="">我的抵用券</a><br/>
+                    <a href="">我的收藏夹</a><br/>
+                    <a href="">我的评论</a><br/>
+                    <a href="">会员专享</a>
+                </div>
+            </li>
+            <li><a class="topLiBlk" href="">&nbsp;&nbsp;&nbsp;收藏夹</a></li>
+            <li><a class="topLiBlk" href="">掌上1号店</a></li>
+            <li><a class="topLiBlk" href="">客户服务</a></li>
+            <li><a class="topLiBlk" href="">网站导航</a></li>
+        </ul>
+        <script>
+            var topBanner=document.getElementById('topBanner');
+            var topLi=topBanner.getElementsByTagName('li');
+            var topLiHid=document.getElementById('topLiHid');
+            var topLiBlk=document.getElementById('topLiBlk');
+//            for(var i=0;i<topLi.length;i++){
+//                function ga(){
+//                }
+//            }
+            topLi[0].onmouseover=ga;
+            function ga(){
+                topLiHid.style.zIndex=2;
+                topLiHid.style.display='block';
+                topLiBlk.className='topLiBlk2';
+
+            }
+            topLi[0].onmouseout=ga1;
+            function ga1(){
+                topLiHid.style.zIndex=-1;
+                topLiHid.style.display='none';
+                topLiBlk.className='topLiBlk';
+            }
+
+        </script>
+        <div class="top-right fs12">关注我们：
+            <a href=""><img src="images/weiBo.png"/></a>
+            <a href=""><img src="images/topWx.png"/></a>
+        </div>
+    </div>
+</div>
+<img class="topImg" src="images/top.jpg"/>
+<div class="top">
+    <img class="logo fl" src="images/logo.png"/>
+    <div class="search fl">
+        <div class="serIp" id="search1">
+            <div id="search" class="ser1 fl fs12">
+                <div class="ser11"><span id="serCon">店铺</span>&nbsp;&nbsp;<img id="serPic" src="images1/ser1.png"/></div>
+                <div class="ser12"><span id="serCon2">商品</span></div>
+            </div>
+            <script>
+                var search=document.getElementById('search');
+                var ser=search.getElementsByTagName('div');
+                var serPic=document.getElementById('serPic');
+                var serCon=document.getElementById('serCon');
+                var serCon2=document.getElementById('serCon2');
+                search.onmouseover=se;
+                function se(){
+                    ser[1].style.zIndex=2;
+                    ser[1].style.display='block';
+                    serPic.src='images1/ser2.png';
+                }
+                search.onmouseout=rt;
+                function rt(){
+                    ser[1].style.zIndex=-1;
+                    ser[1].style.display='none';
+                    serPic.src='images1/ser1.png';
+                }
+                ser[1].onclick=function(){
+                    if(serCon.innerHTML=='店铺'){
+                        serCon.innerHTML='商品';
+                        serCon2.innerHTML='店铺';
+                    }
+                    else{
+                        serCon.innerHTML='店铺';
+                        serCon2.innerHTML='商品';
+                    }
+                    ser[1].style.display='none';
+                }
+            </script>
+            <input class="fl" type="text" value="请输入关键词"/>
+            <div class="ser2 fl">搜索</div>
+        </div>
+        <ul class="dailyUse">
+            <li><a href="">电水壶</a></li>
+            <li><a href="">蓝月亮</a></li>
+            <li><a href="">卫生纸</a></li>
+            <li><a href="">洗衣液</a></li>
+            <li><a href="">毛巾</a></li>
+            <li><a href="">外套女</a></li>
+            <li><a href="">卫生巾</a></li>
+            <li><a href="">纸品</a></li>
+            <li><a href="">休闲零食</a></li>
+            <li><a href="">苹果</a></li>
+        </ul>
+    </div>
+    <div class="top-r">
+        <div>
+            <img src="images/fuli.png"/><br/>福利
+        </div>
+        <div>
+            <img src="images/ddcx.png"/><br/>订单查询
+        </div>
+    </div>
+    <div class="gwc" id="gw">
+        <img src="images/gwc.png"/>购物车
+        <img class="gwc1" src="images/gwc1.png"/>
+        <div id="gWc">
+            <div>登录</div>
+        </div>
+    </div>
+    <script>
+        var gw=document.getElementById('gw');
+        var gWc=document.getElementById('gWc');
+        gw.onmouseover=a;
+        function a(){
+            gWc.style.display='block';
+        }
+        gw.onmouseout=a1;
+        function a1(){
+            gWc.style.display='none';
+        }
+    </script>
+</div>
+<div class="banner">
+    <div class="banner-left fl">所有商品分类</div>
+    <ul class="banner-cen">
+        <li><a class="red" href="">首页</a></li>
+        <li><a class="red" href="">自营超市</a></li>
+        <li><a class="red" href="">1号团</a></li>
+        <li><a href="">1号商场</a></li>
+        <li><a href="">闪购</a></li>
+        <li><a href="">活色生鲜</a></li>
+        <li><a href="">医药</a></li>
+        <li><a href="">1号海购</a></li>
+        <li><a href="">当当书城</a></li>
+    </ul>
+    <img class="fr pho" src="images1/ban-r.gif"/>
+</div>
+<div class="line fl"></div>
+<div id="mainM">
+    <div class="main">
+        <div id="mainA">
+            <div class="mainA-l"></div>
+            <div class="mainA-r"></div>
+        </div>
+        <ul class="bannerAll fl" id="banner">
+            <li>
+                <a href="">进口食品、</a>
+                <a href="">生鲜、</a>
+                <a href="">海购</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">食品、</a>
+                <a href="">饮料、</a>
+                <a href="">酒</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">母婴、</a>
+                <a href="">玩具、</a>
+                <a href="">童装</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">厨卫清洁、</a>
+                <a href="">纸、</a>
+                <a href="">清洁剂</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">家居、</a>
+                <a href="">家装、</a>
+                <a href="">宠物</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">美妆、</a>
+                <a href="">个人护理、</a>
+                <a href="">洗护</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">女装内衣、</a>
+                <a href="">男装、</a>
+                <a href="">配饰</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">鞋靴、</a>
+                <a href="">箱包、</a>
+                <a href="">运动户外</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">手机、</a>
+                <a href="">数码、</a>
+                <a href="">办公电脑</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">大家电、</a>
+                <a href="">小家电、</a>
+                <a href="">汽车</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">保健滋补、</a>
+                <a href="">医药、</a>
+                <a href="">成人</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+            <li>
+                <a href="">礼品卡、</a>
+                <a href="">旅游、</a>
+                <a href="">图书</a>
+                <img src="images/mainLiPic.png"/>
+            </li>
+        </ul>
+        <div class="daTu fl" id="daTu">
+            <div id="picS" class="fl">
+                <img src="images/pic0.jpg"/>
+                <img src="images/pic1.jpg"/>
+                <img src="images/pic2.jpg"/>
+                <img src="images/pic3.jpg"/>
+                <img src="images/pic4.jpg"/>
+                <img src="images/pic5.jpg"/>
+                <img src="images/pic6.jpg"/>
+                <img src="images/pic7.jpg"/>
+                <img src="images/pic8.jpg"/>
+            </div>
+            <ul id="but">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="last" class="zuoYou">&lt;</div>
+            <div id="next" class="zuoYou">&gt;</div>
+        </div>
+        <div class="message fs12">
+            <div class="kXun">
+                <h3 class="kkx">快讯</h3>
+                <ul class="news">
+                    <li><a class="red" href=""><span>【逛呗】</span>山姆杂粮，春天里的小清心</a></li>
+                    <li><a href=""><span>【优选】</span>春季消毒大作战</a></li>
+                    <li><a href=""><span>【优选】</span>吃货的瘦身之路：七日排毒餐</a></li>
+                    <li><a href=""><span>【逛呗】</span>白色情人节，不要套路要真诚</a></li>
+                    <li><a href=""><span>【逛呗】</span>茶几里种绿植，来点不一样的</a></li>
+                    <li><a href=""><span>【逛呗】</span>做明白孕妈，按周采购不蒙圈</a></li>
+                </ul>
+            </div>
+            <div class="zuX">
+                <div class="sale">1号专享</div>
+                <ul class="sales">
+                    <li><a class="a1" href="">0元试用</a></li>
+                    <li><a class="a2" href="">积分商城</a></li>
+                    <li><a class="a3" href="">礼品卡</a></li>
+                    <li><a class="a4" href="">充值中心</a></li>
+                    <li><a class="a5" href="">页游点卡</a></li>
+                    <li><a class="a6" href="">1号钱包</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" id="house">
+    <div class="todayBt marBtm20">
+        <a class="fl" href=""><img src="images/todayBt.jpg"/> </a>
+        <ul class="btShow fl" id="moving">
+            <li>
+                <h3>进口•海购</h3>
+                <div>薰衣草洗发水</div>
+                <img src="images/xiFa.jpg"/>
+            </li>
+            <li class="btShow2">
+                <h3>剁手价</h3>
+                <div>大昌花生牛轧400g</div>
+                <img src="images/niuZa.jpg"/>
+            </li>
+            <li class="btShow3">
+                <h3>特产中国•温县铁棍山药</h3>
+                <div>铁棍山药豆2斤</div>
+                <img src="images/sanYao.jpg"/>
+            </li>
+            <li>
+                <h3>新品上市0元试用</h3>
+                <div>多功能智能养生壶</div>
+                <img src="images/yangSengHu.jpg"/>
+            </li>
+        </ul>
+        <a class="fl" href=""><img src="images/superSg.jpg"/> </a>
+        <ul class="btShow fl widTh" id="moving2">
+            <li>
+                <h3>手机家电城</h3>
+                <div>iPhone6s4G玫瑰金</div>
+                <img src="images/iphone6.jpg"/>
+            </li>
+            <li>
+                <h3>萌宝</h3>
+                <div>巴布豆春季特惠专场</div>
+                <img src="images/mengbao.jpg"/>
+            </li>
+        </ul>
+        <script>
+            var move=document.getElementById('moving');
+            var move2=document.getElementById('moving2');
+            var img1=move.getElementsByTagName('img');
+            var img2=move2.getElementsByTagName('img');
+            var m=40;
+            var tim;
+            function mo(img){
+                for (var i=0;i<img.length;i++){
+                    img[i].onmouseover=cc;
+                    function cc(){
+                        for(var j=0;j<img.length;j++){
+                            if(this==img[j]){
+                                dd(img[j])
+                            }
+                        }
+                    }
+                    img[i].onmouseout=cc1;
+                    function cc1(){
+                        for(var j=0;j<img.length;j++){
+                            if(this==img[j]){
+                                dd1(img[j])
+                            }
+                        }
+                    }
+                }
+            }
+            mo(img1);
+            mo(img2);
+            function dd(flag){
+                clearInterval(tim);
+                tim=setInterval(function(){
+                    m--;
+                    if(m<=30){
+                        clearInterval(tim);
+                    }
+                    flag.style.left=m+'px';
+                },20)
+            }
+            function dd1(flag) {
+                clearInterval(tim);
+                tim = setInterval(function () {
+                    m++;
+                    if (m >= 40) {
+                        clearInterval(tim);
+                    }
+                    flag.style.left = m + 'px';
+                }, 20);
+            }
+        </script>
+    </div>
+    <img class="mid-tip" src="images/mid-tip.jpg"/>
+    <ul id="trueHou">
+        <li class="house1" id="house0">
+            <div class="houseBanner">
+                <span>进口•海购</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">早餐燕麦选哪种？</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">进口酒</a>|</li>
+                    <li><a href="">进口冲饮</a>|</li>
+                    <li><a href="">进口直采</a>|</li>
+                    <li><a href="">海购箱包</a>|</li>
+                    <li><a href="">海购电器</a>|</li>
+                    <li><a href="">海购母婴</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">进口牛奶</a><a class="ding" href="">进口饼干</a></li>
+                        <li><a href="">进口巧克力</a><a class="ding" href="">进口坚果</a></li>
+                        <li><a href="">进口咖啡</a><a class="ding" href="">买1送1</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a href=""> 台湾进口燕麦糖</a></h3>
+                        <a href="" class="fs12">买一送一</a>
+                        <img src="images/leftBtm.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut0" class="mainOut">
+                    <div id="mainShow0" class="mainShow">
+                        <div class="housePic">
+                            <img src="images/housePic.jpg"/>
+                            <img src="images/houseP2.jpg"/>
+                            <img src="images/houseP3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo0" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>买一送一</h3>
+                        <a href="" class="fs12">进口零食</a>
+                        <img src="images/liuZui.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>买一送一</h3>
+                        <a href="" class="fs12">进口休闲零食</a>
+                        <img src="images/lingZui2.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>超级新品周 半价剁手</h3>
+                        <a href="" class="fs12">太阳的后裔 5折起</a>
+                        <img src="images/baoB.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>自营海购 极速免税</h3>
+                        <a href="" class="fs12">新品到港 自然晨露3.8元</a>
+                        <img src="images/cenLu.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>全球闪购</h3>
+                        <a href="" class="fs12">ISDIN一支解决疤痕</a>
+                        <img src="images/baHen.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house1">
+            <div class="houseBanner">
+                <span>活色生鲜</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">你喜欢吃热带水果吗？</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">票券礼券</a>|</li>
+                    <li><a href="">肉类熏腊</a>|</li>
+                    <li><a href="">速冻食品</a>|</li>
+                    <li><a href="">低温乳品</a>|</li>
+                    <li><a href="">熟食方便菜</a>|</li>
+                    <li><a href="">烘焙甜点</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">1号生鲜</a><a class="ding" href="">新鲜水果</a></li>
+                        <li><a href="">车厘子</a><a class="ding" href="">品质牛肉</a></li>
+                        <li><a href="">海鲜水产</a><a class="ding" href="">鲜活蛋类</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a href="">宫御海参500g即食</a></h3>
+                        <a href="" class="fs12">8年野生刺参</a>
+                        <img src="images/ciSen.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut1" class="mainOut">
+                    <div id="mainShow1" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/jJu2.jpg"/>
+                            <img src="images1/haiXian2.jpg"/>
+                            <img src="images1/haiXian1.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo1" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>锋利VS菠萝</h3>
+                        <a href="" class="fs12">越南小菠萝4个/￥29.9</a>
+                        <img src="images/boLuo.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>春日鲜</h3>
+                        <a href="" class="fs12">高山富士 10斤￥28</a>
+                        <img src="images/cunRi.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>生鲜排行榜 精品热销</h3>
+                        <a href="" class="fs12">阿根廷红虾4斤/盒 158元</a>
+                        <img src="images/hongXia.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>1号生鲜 全场优惠</h3>
+                        <a href="" class="fs12">全场第二件半价</a>
+                        <img src="images/banJia.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>春游外出 不孤单</h3>
+                        <a href="" class="fs12">爆款直降</a>
+                        <img src="images/baoKuan.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house2">
+            <div class="houseBanner">
+                <span>食品饮料</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">做一个合格抹茶控！</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">饮料饮品</a>|</li>
+                    <li><a href="">方便速食</a>|</li>
+                    <li><a href="">咖啡</a>|</li>
+                    <li><a href="">厨房调料</a>|</li>
+                    <li><a href="">冲饮谷物</a>|</li>
+                    <li><a href="">糖果巧克力</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">饼干糕点</a><a class="ding" href="">休闲零食</a></li>
+                        <li><a href="">粮油干货</a><a class="ding" href="">国产名酒</a></li>
+                        <li><a href="">牛奶乳品</a><a class="ding" href="">保健滋补</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a href="">法国红酒</a></h3>
+                        <a href="" class="fs12">正品保证</a>
+                        <img src="images/hongJiu.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut2" class="mainOut">
+                    <div id="mainShow2" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/yinLiao1.jpg"/>
+                            <img src="images1/yinLiao2.jpg"/>
+                            <img src="images1/yinLiao3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo2" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>美味零嘴</h3>
+                        <a href="" class="fs12">满49减10</a>
+                        <img src="images/lingZui.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>真品真酒一贵就陪</h3>
+                        <a href="" class="fs12">1号酒窖</a>
+                        <img src="images/jiuJiao.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>0元限量抢 满128减18</h3>
+                        <a href="" class="fs12">粮油冲锋周</a>
+                        <img src="images/you.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>买一送一</h3>
+                        <a href="" class="fs12">冲饮好茶</a>
+                        <img src="images/ca.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>成人用品满99减20</h3>
+                        <a href="" class="fs12">白色情人节</a>
+                        <img src="images/cengR.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house3">
+            <div class="houseBanner  houseBanner-g">
+                <span  class="green">个护厨卫</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">男人剃须那点事 !  </div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">面部护肤</a>|</li>
+                    <li><a href="">男士护理</a>|</li>
+                    <li><a href="">纸品</a>|</li>
+                    <li><a href="">换季衣物洗护</a>|</li>
+                    <li><a href="">彩妆</a>|</li>
+                    <li><a href="">威猛先生</a></li>
+                </ul>
+            </div>
+            <div class="houseCon bigHouse" >
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">发水沐浴</a><a class="ding" href="">女生护理</a></li>
+                        <li><a href="">口腔护理</a><a class="ding" href="">纸品湿巾</a></li>
+                        <li><a href="">衣物洗护</a><a class="ding" href="">家庭清洁</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a  class="green" href="">蓝月亮品牌宣言</a></h3>
+                        <a href="" class="fs12">满299减120</a>
+                        <img src="images/lanYue.jpg"/>
+                    </div>
+                    <div class="houseCon2 fl smHouse">
+                        <div class="houseCon21">
+                            <h3 class="green">1号纸品大团3.3折起</h3>
+                            <a href="" class="fs12">自营有保障</a>
+                            <img src="images/zhiPin.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="mainOut3" class="mainOut">
+                    <div id="mainShow3" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/cuWei1.jpg"/>
+                            <img src="images1/cuWei2.jpg"/>
+                            <img src="images1/cuWei3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo3" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="picBtm">
+                    <div class="picBtm-l fl">
+                        <h3 class="green">国产大牌PK进口洋货</h3>
+                        <a href="">9.9元包邮</a>
+                        <div>99-50</div>
+                    </div>
+                    <img class="fr" src="images/xi.jpg"/>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>1号纸品大团3.3折起</h3>
+                        <a href="" class="fs12">自营有保障</a>
+                        <img src="images/zhiPin.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>换季衣物洗护团</h3>
+                        <a href="" class="fs12">爆品5折起</a>
+                        <img src="images/xiHuT.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>换季衣物洗护团</h3>
+                        <a href="" class="fs12">爆品5折起</a>
+                        <img src="images/xiHuT.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>美妆个护</h3>
+                        <a href="" class="fs12">授权正品满299减120</a>
+                        <img src="images/meiZgH.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>换季衣物洗护团</h3>
+                        <a href="" class="fs12">爆品5折起</a>
+                        <img src="images/xiHuT.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>为空腔细节加分</h3>
+                        <a href="" class="fs12">满299减120</a>
+                        <img src="images/yaGao.jpg"/>
+                    </div>
+                    <div class="houseCon21">
+                        <h3>美妆个护</h3>
+                        <a href="" class="fs12">授权正品满299减120</a>
+                        <img src="images/meiZgH.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house4">
+            <div class="houseBanner">
+                <span>母婴玩具</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">孕妈入院包要备齐</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">宝宝洗衣液</a>|</li>
+                    <li><a href="">营养米粉</a>|</li>
+                    <li><a href="">奶瓶奶嘴</a>|</li>
+                    <li><a href="">儿童玩具</a>|</li>
+                    <li><a href="">拉拉裤</a>|</li>
+                    <li><a href="">营养品</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">洗护清洁</a><a class="ding" href="">哺育喂养</a></li>
+                        <li><a href="">孕妈用品</a><a class="ding" href="">儿童玩具</a></li>
+                        <li><a href="">辅食营养</a><a class="ding" href="">营养品</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a href="">巴巴小 镇春夏上新</a></h3>
+                        <a href="" class="fs12">小女神潮搭配</a>
+                        <img src="images/xiaoHai.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut4"  class="mainOut">
+                    <div id="mainShow4" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/muYing.jpg"/>
+                            <img src="images1/muYing1.jpg"/>
+                            <img src="images1/muYing2.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo4" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>感恩有“礼”宠爱加</h3>
+                        <a href="" class="fs12">纸尿裤中心</a>
+                        <img src="images/ganEn.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>奶粉大牌惠聚尽情购</h3>
+                        <a href="" class="fs12">第二件6折</a>
+                        <img src="images/naiFen.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>宝宝食品</h3>
+                        <a href="" class="fs12">买满100减40</a>
+                        <img src="images/bbSp.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>时尚孕妈一站购</h3>
+                        <a href="" class="fs12">全场9.9元起</a>
+                        <img src="images/ssYm.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>迪士尼开园第一波</h3>
+                        <a href="" class="fs12">前150名返现10元</a>
+                        <img src="images/diSINi.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house5">
+            <div class="houseBanner">
+                <span>家居馆</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">换季收纳好物</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">棉拖鞋</a>|</li>
+                    <li><a href="">毛巾</a>|</li>
+                    <li><a href="">晴雨伞</a>|</li>
+                    <li><a href="">防霾口罩</a>|</li>
+                    <li><a href="">秋冬床品</a>|</li>
+                    <li><a href="">换季收纳</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">餐具水具</a><a class="ding" href="">锅具厨具</a></li>
+                        <li><a href="">床上用品</a><a class="ding" href="">家纺布艺</a></li>
+                        <li><a href="">家装建材</a><a class="ding" href="">宠物用品</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a href="">婚庆带花喜糖盒</a></h3>
+                        <a href="" class="fs12">婚庆喜糖盒</a>
+                        <img src="images/xiTang.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut5" class="mainOut">
+                    <div id="mainShow5" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/jJu1.jpg"/>
+                            <img src="images1/jJu2.jpg"/>
+                            <img src="images1/jJu3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo5" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>家装一站购</h3>
+                        <a href="" class="fs12">品牌聚惠 好货不贵</a>
+                        <img src="images/saFa.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>家纺春季上新</h3>
+                        <a href="" class="fs12">低至1元起秒抢</a>
+                        <img src="images/jiaFang.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>春天，与床谈恋爱</h3>
+                        <a href="" class="fs12">床品内衣满299减100</a>
+                        <img src="images/cunTian.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>家纺布艺第2件三折</h3>
+                        <a href="" class="fs12">春季用品好货专场</a>
+                        <img src="images/buLiao.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>爱它就给它最好的</h3>
+                        <a href="" class="fs12">宠物用品优品好货</a>
+                        <img src="images/congWu.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house6">
+            <div class="houseBanner houseBanner-g">
+                <span  class="green">流行百货</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">元气少女look篇</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">新款连衣裙</a>|</li>
+                    <li><a href="">男式T恤</a>|</li>
+                    <li><a href="">太阳镜</a>|</li>
+                    <li><a href="">春款女鞋</a>|</li>
+                    <li><a href="">女包新品</a>|</li>
+                    <li><a href="">减脂健身</a></li>
+                </ul>
+            </div>
+            <div class="houseCon bigHouse">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">女装内衣</a><a class="ding" href="">品质男装</a></li>
+                        <li><a href="">大牌箱包</a><a class="ding" href="">运动户外</a></li>
+                        <li><a href="">珠宝饰品</a><a class="ding" href="">男女鞋上新</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a  class="green" href="">巴巴小 镇春夏上新</a></h3>
+                        <a href="" class="fs12">小女神潮搭配</a>
+                        <img src="images/xiaoHai.jpg"/>
+                    </div>
+                    <div class="houseCon2 fl smHouse">
+                        <div class="houseCon21">
+                            <h3>1号纸品大团3.3折起</h3>
+                            <a href="" class="fs12">自营有保障</a>
+                            <img src="images/zhiPin.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="mainOut6" class="mainOut">
+                    <div id="mainShow6" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/baiHuo1.jpg"/>
+                            <img src="images/houseP2.jpg"/>
+                            <img src="images/houseP3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo6" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="picBtm">
+                    <div class="picBtm-l fl">
+                        <h3 class="green">国产大牌PK进口洋货</h3>
+                        <a href="">9.9元包邮</a>
+                        <div>99-50</div>
+                    </div>
+                    <img class="fr" src="images/xi.jpg"/>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>时尚女装馆</h3>
+                        <a href="" class="fs12">春光乍现 新款2.5折起</a>
+                        <img src="images/lingZui.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/jiuJiao.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/jiLie.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/nvBao.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/lingZui.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>吉列</h3>
+                        <a href="" class="fs12">满99送3D眼镜</a>
+                        <img src="images/jiLie.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>迪士尼开园第一波</h3>
+                        <a href="" class="fs12">前150名返现10元</a>
+                        <img src="images/cengR.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/jiuJiao.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house7">
+            <div class="houseBanner houseBanner-g">
+                <span class="green">手机家电</span>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="con fs12">自炊生活，一招搞定</div>
+                    </div>
+                </div>
+                <ul class="houseLi">
+                    <li><a href="">iPhone6s</a>|</li>
+                    <li><a href="">iPad</a>|</li>
+                    <li><a href="">家电直降特惠</a>|</li>
+                    <li><a href="">合约机</a>|</li>
+                    <li><a href="">电脑配件</a>|</li>
+                    <li><a href="">智能穿戴</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div class="houseCon-left fl">
+                    <ul class="houseCon-leftLi">
+                        <li><a href="">手机</a><a class="ding" href="">买手机送话费</a></li>
+                        <li><a href="">平板电脑</a><a class="ding" href="">家电</a></li>
+                        <li><a href="">数码配件</a><a class="ding" href="">取暖器</a></li>
+                    </ul>
+                    <div class="houseCon-leftBtm fl">
+                        <h3><a  class="green" href="">凹槽特效第一期</a></h3>
+                        <a href="" class="fs12">凹槽特效消失字帖</a>
+                        <img src="images/ziTie.jpg"/>
+                    </div>
+                </div>
+                <div id="mainOut7" class="mainOut">
+                    <div id="mainShow7" class="mainShow">
+                        <div class="housePic">
+                            <img src="images1/sj1.jpg"/>
+                            <img src="images1/sj2.jpg"/>
+                            <img src="images1/sj3.jpg"/>
+                        </div>
+                    </div>
+                    <div id="tiAo7" class="tiAoO">
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                        <div class="tiAo"><span class="tiAoIn"></span></div>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>爱生活 要品质</h3>
+                        <a href="" class="fs12">满300减50 满500减100</a>
+                        <img src="images/lingZui.jpg"/>
+                    </div>
+                    <div class="houseCon22">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/jiuJiao.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon3 fl">
+                    <div class="houseCon21">
+                        <h3>女神靠包妆</h3>
+                        <a href="" class="fs12">0元限量秒</a>
+                        <img src="images/you.jpg"/>
+                    </div>
+                </div>
+                <div class="houseCon2 fl">
+                    <div class="houseCon21">
+                        <h3>吉列</h3>
+                        <a href="" class="fs12">满99送3D眼镜</a>
+                        <img src="images/ca.jpg"/>
+                    </div>
+                    <div class="houseCon22 fl">
+                        <h3>迪士尼开园第一波</h3>
+                        <a href="" class="fs12">前150名返现10元</a>
+                        <img src="images/cengR.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="house1" id="house8">
+            <div class="houseBanner">
+                <span>闪购</span>
+
+                <ul class="houseLi">
+                    <li><a href="">品牌点亮生活，每天十点上新</a></li>
+                </ul>
+            </div>
+            <div class="houseCon">
+                <div id="endShow">
+                    <div class="houseCon-left fl end" id="endPic">
+                        <a href=""><img src="images/end1.jpg"/></a>
+                        <a href=""><img src="images/end2.jpg"/></a>
+                        <a href=""><img src="images/end3.jpg"/></a>
+                        <a href=""><img src="images/end4.jpg"/></a>
+                        <a href=""><img src="images/end5.jpg"/></a>
+                        <a href=""><img src="images/end6.jpg"/></a>
+                        <a href=""><img src="images/end7.jpg"/></a>
+                        <a href=""><img src="images/end8.jpg"/></a>
+                        <a href=""><img src="images/end9.jpg"/></a>
+                        <a href=""><img src="images/end10.jpg"/></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="footer">
+    <ul class="footer-top">
+        <li class="footTopLi">
+            <img src="images/ft1.png"/>
+            <div>正品保障</div>
+            <p>正品行货 放心选购</p>
+        </li>
+        <li class="footTopLi">
+            <img src="images/ft2.png"/>
+            <div>满68元包邮</div>
+            <p>满68元 免运费</p>
+        </li>
+        <li class="footTopLi">
+            <img src="images/ft3.png"/>
+            <div>售后无忧</div>
+            <p>7天无理由退货</p>
+        </li>
+        <li class="footTopLi">
+            <img src="images/ft4.png"/>
+            <div>准时送达</div>
+            <p>收货时间由你做主</p>
+        </li>
+    </ul>
+    <div class="footer-mid">
+        <ul class="fotMidLi">
+            <li class="biAoTi">新手入门</li>
+            <li>购物流程</li>
+            <li>会员制度</li>
+            <li>订单查询</li>
+            <li>发票制度</li>
+            <li>常见问题</li>
+        </ul>
+        <ul class="fotMidLi">
+            <li class="biAoTi">支付方式</li>
+            <li>货到付款</li>
+            <li>网上支付</li>
+            <li>银行转账</li>
+            <li>礼品卡支付</li>
+            <li>其他支付</li>
+        </ul>
+        <ul class="fotMidLi">
+            <li class="biAoTi">配送服务</li>
+            <li>配送范围及运费</li>
+            <li>配送进度查询</li>
+            <li>自提服务</li>
+            <li>商品验货与签收</li>
+        </ul>
+        <ul class="fotMidLi">
+            <li class="biAoTi">售后保障</li>
+            <li>退换货政策</li>
+            <li>退换货流程</li>
+            <li>退款说明</li>
+            <li>购买延保服务</li>
+            <li>联系客服</li>
+        </ul>
+        <ul class="fotMidLi">
+            <li class="biAoTi">商家合作门</li>
+            <li>商家入驻</li>
+            <li>商必赢</li>
+            <li>平台规则</li>
+            <li>企业采购</li>
+        </ul>
+        <span>
+            <p>1号店客户端</p>
+            <img src="images/keHuD.png"/>
+        </span>
+        <span>
+            <p>1号店微信</p>
+            <img src="images/weiXin.jpg"/>
+        </span>
+    </div>
+    <div class="footer-btm">
+        <ul class="fotBtmLi">
+            <li><a href="">关于1号店</a>|</li>
+            <li><a href="">我们的团队</a>|</li>
+            <li><a href="">网站联盟</a>|</li>
+            <li><a href="">热门搜索</a>|</li>
+            <li><a href="">友情链接</a>|</li>
+            <li><a href="">1号店社区</a>|</li>
+            <li><a href="">诚征英才</a>|</li>
+            <li><a href="">商家登录</a>|</li>
+            <li><a href="">供应商登录</a>|</li>
+            <li><a href="">放心搜</a>|</li>
+            <li><a href="">1号店新品</a>|</li>
+            <li><a href="">开放平台</a>|</li>
+            <li><a href="">沃尔玛</a></li>
+        </ul>
+        <ul class="fotBtmLi fotBtmLi2">
+            <li><a href="">沪ICP备13044278号</a>|</li>
+            <li><a href="">合字B1.B2-20130004</a>|</li>
+            <li><a href="">营业执照</a>|</li>
+            <li><a href="">互联网药品信息服务资格证</a>|</li>
+            <li><a href="">互联网药品交易服务资格证</a>|</li>
+        </ul>
+        <p>Copyright&copy; 1号店网上超市 2007-2016，All Right Reserved</p>
+        <ul class="footer-pic">
+            <li><img src="images/footer-pic1.gif"/></li>
+            <li><img src="images/footer-pic2.jpg"/></li>
+            <li><img src="images/footer-pic3.gif"/></li>
+            <li><img src="images/footer-pic4.png"/></li>
+            <li><img src="images/footer-pic5.gif"/></li>
+            <li><img src="images/footer-pic6.jpg"/></li>
+            <li><img src="images/footer-pic7.png"/></li>
+            <li><img src="images/footer-pic8.jpg"/></li>
+            <li><img src="images/footer-pic9.jpg"/></li>
+        </ul>
+    </div>
+</div>
+<div id="floor">
+    <ul>
+        <li><div>进口<br/>海购</div></li>
+        <li><div>活色<br/>生鲜</div></li>
+        <li><div>食品<br/>饮料</div></li>
+        <li><div>个护<br/>厨卫</div></li>
+        <li><div>母婴<br/>玩具</div></li>
+        <li><div>精品<br/>家居</div></li>
+        <li><div>流行<br/>百货</div></li>
+        <li><div>手机<br/>家电</div></li>
+        <li><div>闪购</div></li>
+    </ul>
+    <span id="backTop"><p id="bac">返回<br/>顶部</p></span>
+</div>
+<div id="floor2">
+    <div class="floor2-cen">
+        <div id="bannerFix">
+            所有商品分类
+            <ul class="bannerAll fl" id="banner2">
+                <li>
+                    <a href="">进口食品、</a>
+                    <a href="">生鲜、</a>
+                    <a href="">海购</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">食品、</a>
+                    <a href="">饮料、</a>
+                    <a href="">酒</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">母婴、</a>
+                    <a href="">玩具、</a>
+                    <a href="">童装</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">厨卫清洁、</a>
+                    <a href="">纸、</a>
+                    <a href="">清洁剂</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">家居、</a>
+                    <a href="">家装、</a>
+                    <a href="">宠物</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">美妆、</a>
+                    <a href="">个人护理、</a>
+                    <a href="">洗护</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">女装内衣、</a>
+                    <a href="">男装、</a>
+                    <a href="">配饰</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">鞋靴、</a>
+                    <a href="">箱包、</a>
+                    <a href="">运动户外</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">手机、</a>
+                    <a href="">数码、</a>
+                    <a href="">办公电脑</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">大家电、</a>
+                    <a href="">小家电、</a>
+                    <a href="">汽车</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">保健滋补、</a>
+                    <a href="">医药、</a>
+                    <a href="">成人</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+                <li>
+                    <a href="">礼品卡、</a>
+                    <a href="">旅游、</a>
+                    <a href="">图书</a>
+                    <img src="images/mainLiPic.png"/>
+                </li>
+            </ul>
+        </div>
+        <script>
+            var bannerFix=document.getElementById('bannerFix');
+            var banner2=document.getElementById('banner2');
+            bannerFix.onmouseover=a;
+            function a(){
+                banner2.style.display='block';
+            }
+            bannerFix.onmouseout=a1;
+            function a1(){
+                banner2.style.display='none';
+            }
+        </script>
+        <div class="serIp serIpFix">
+            <input class="fl" type="text" value="请输入关键词"/>
+            <div class="ser2 fl">搜索</div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/js2.js"></script>
+</html>
