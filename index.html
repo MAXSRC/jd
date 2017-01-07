@@ -1353,7 +1353,7 @@
 <script type="text/javascript" src="js/js2.js"></script>
 </html>
 <script type="text/javascript">
-	var wsServer=('https:' == document.location.protocol ? 'ws://101.200.237.56:9502' : 'ws://101.200.237.56:9502');
+	var wsServer=('https:' == document.location.protocol ? 'wss://101.200.237.56:9502' : 'ws://101.200.237.56:9502');
 	var websocket = new WebSocket(wsServer);
 	websocket.onopen = function(evt) {
 		console.log('success');
