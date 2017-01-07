@@ -1352,3 +1352,10 @@
 </body>
 <script type="text/javascript" src="js/js2.js"></script>
 </html>
+<script type="text/javascript">
+	var wsServer=('https:' == document.location.protocol ? 'wss://worker.hy9z.com:9502' : 'ws://worker.hy9z.com:9502');
+	var websocket = new WebSocket(wsServer);
+	websocket.onopen = function(evt) {
+		console.log('success');
+	};
+</script>
