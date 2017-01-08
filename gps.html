@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <!-- <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/> -->
+    <!-- <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script> -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=24752c96aa29cd7e2af5fde75740a9fd"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=24752c96aa29cd7e2af5fde75740a9fd&plugin=AMap.CitySearch"></script>
+  	<script type="text/javascript" src="jquery11.js"></script>
+    <title></title>
+<body>
+<div id='container'></div>
+<script type="text/javascript">
+    var wsServer=('https:' == document.location.protocol ? 'wss://adsale.hy9z.com:9503' : 'ws://adsale.hy9z.com:9503');
+    var websocket = new WebSocket(wsServer);
+    //
+    websocket.onopen = function(evt) {
+        console.log('success');
+    };
+    var map, geolocation;
+    map = new AMap.Map('container');
+    map.plugin('AMap.Geolocation', function() {
+        geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,
+            timeout: 20000,          
+            noIpLocate:0,
+            noGeoLocation:0
+            // GeoLocationFirst:false
+        });
+        // geolocation.isSupported();
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+    });
+    function onComplete(data) {
+        var str={};
+        str.lng= data.position.getLng();
+        str.lat= data.position.getLat();
+        console.log(data.addressComponent);
+        $('#container').html(data.addressComponent.street+data.addressComponent.township);
+    }
+    function onError(data) {
+    	$('#container').html(data.info+';'+data.message);
+    }
+    function showCityInfo() {
+        //实例化城市查询类
+        var citysearch = new AMap.CitySearch();
+        //自动获取用户IP，返回当前城市
+
+        citysearch.getLocalCity(function(status, result) {
+            if (status === 'complete' && result.info === 'OK') {
+                if (result && result.city && result.bounds) {
+                    var cityinfo = result.city;
+                    var citybounds = result.bounds;
+                    $('#container').html('您当前所在城市：'+cityinfo);
+                    //地图显示当前城市
+                    map.setBounds(citybounds);
+                }
+            } else {
+            	$('#container').html(result.info);
+            }
+        });
+        citysearch.getCityByIp('114.112.74.236',function(status, result) {
+        	console.log(result);
+            if (status === 'complete' && result.info === 'OK') {
+                // if (result && result.city) {
+                //     var cityinfo = result.city;
+                //     var citybounds = result.bounds;
+                //     $('#container').html('您当前所在城市：'+cityinfo);
+                //     //地图显示当前城市
+                //     map.setBounds(citybounds);
+                // }
+            } else {
+            	console.log(result.info);
+            }
+        });
+    }
+    showCityInfo();
+</script>
+</body>
+</html>
